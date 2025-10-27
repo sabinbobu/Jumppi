@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 32 35% 92%;
+    --foreground: 0 0% 10%;
+
+    --card: 32 40% 95%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 32 40% 95%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 345 60% 35%;
+    --primary-foreground: 32 35% 92%;
+
+    --secondary: 82 35% 60%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 32 25% 85%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 45 85% 85%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 32 35% 92%;
+
+    --border: 32 20% 75%;
+    --input: 32 20% 75%;
+    --ring: 345 60% 35%;
+
+    --radius: 1.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 28 25% 20%;
+    --foreground: 32 35% 92%;
+
+    --card: 28 25% 25%;
+    --card-foreground: 32 35% 92%;
+
+    --popover: 28 25% 25%;
+    --popover-foreground: 32 35% 92%;
+
+    --primary: 345 60% 45%;
+    --primary-foreground: 32 35% 92%;
+
+    --secondary: 82 35% 50%;
+    --secondary-foreground: 32 35% 92%;
+
+    --muted: 28 20% 30%;
+    --muted-foreground: 32 20% 65%;
+
+    --accent: 45 70% 70%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 32 35% 92%;
+
+    --border: 28 15% 35%;
+    --input: 28 15% 35%;
+    --ring: 345 60% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+@layer utilities {
+  .handwriting {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Arial Rounded MT Bold', cursive;
+  }
+  
+  .game-button {
+    @apply bg-accent border-2 border-foreground rounded-full px-8 py-3 
+           font-bold transition-transform hover:scale-105 active:scale-95
+           shadow-[3px_3px_0px_0px_rgba(0,0,0,0.3)] text-foreground;
+  }
+}
